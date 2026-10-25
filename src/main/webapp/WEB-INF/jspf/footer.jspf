@@ -1,0 +1,3 @@
+<%@ page pageEncoding="UTF-8" %>
+</main><footer>Gestion des commandes <span>Projet JEE · MVC1 · MySQL</span></footer></div>
+<script src="${pageContext.request.contextPath}/assets/app.js" defer></script></body></html>

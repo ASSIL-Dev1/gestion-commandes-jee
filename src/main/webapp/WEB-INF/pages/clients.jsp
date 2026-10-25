@@ -1,0 +1,15 @@
+<%@ page import="ma.fstt.web.ClientPage" %><% if(new ClientPage().handle(request,response)) return; %>
+<%@ include file="/WEB-INF/jspf/header.jspf" %>
+<c:choose><c:when test="${form}"><p class="subtitle">${empty param.id ? 'Ajouter' : 'Modifier'} un client.</p>
+<section class="panel form-panel"><form method="post" action="${pageContext.request.contextPath}/clients"><input type="hidden" name="action" value="save"><input type="hidden" name="id" value="<c:out value="${param.id}"/>"><input type="hidden" name="csrf" value="${sessionScope.csrf}">
+<div class="form-grid"><label>Nom complet<input name="nom" type="text" value="<c:out value="${pageContext.request.method eq 'POST' ? param.nom : item.nom}"/>" maxlength="120" required></label>
+<label>Adresse email<input name="email" type="email" value="<c:out value="${pageContext.request.method eq 'POST' ? param.email : item.email}"/>" maxlength="180" required></label>
+<label>Téléphone<input name="telephone" type="tel" value="<c:out value="${pageContext.request.method eq 'POST' ? param.telephone : item.telephone}"/>" maxlength="30"></label>
+<label>Adresse<input name="adresse" type="text" value="<c:out value="${pageContext.request.method eq 'POST' ? param.adresse : item.adresse}"/>" maxlength="255"></label>
+</div><div class="form-actions"><button class="button" type="submit">Enregistrer</button><a class="button secondary" href="${pageContext.request.contextPath}/clients">Annuler</a></div></form></section>
+</c:when><c:otherwise><div class="page-heading"><p class="subtitle">Retrouvez et gérez les coordonnées de vos clients.</p><a class="button" href="${pageContext.request.contextPath}/clients?action=new">+ Nouveau client</a></div>
+<section class="panel"><div class="panel-heading"><h2>Liste des clients</h2><input class="search" type="search" data-table-search placeholder="Rechercher…" aria-label="Rechercher dans la liste"></div>
+<div class="table-wrap"><table data-searchable><thead><tr><th>N°</th><th>Nom complet</th><th>Adresse email</th><th>Téléphone</th><th>Adresse</th><th>Actions</th></tr></thead><tbody>
+<c:forEach items="${items}" var="e"><tr><td class="muted">#<c:out value="${e.id}"/></td><td><c:out value="${e.nom}"/></td><td><c:out value="${e.email}"/></td><td><c:out value="${e.telephone}"/></td><td><c:out value="${e.adresse}"/></td><td><div class="row-actions"><a href="${pageContext.request.contextPath}/clients?action=edit&amp;id=${e.id}">Modifier</a><form method="post" action="${pageContext.request.contextPath}/clients" data-confirm="Supprimer cet enregistrement ?"><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="${e.id}"><input type="hidden" name="csrf" value="${sessionScope.csrf}"><button type="submit" class="danger-link">Supprimer</button></form></div></td></tr></c:forEach>
+<c:if test="${empty items}"><tr><td colspan="6" class="empty">Aucun client enregistré.</td></tr></c:if></tbody></table><p class="search-empty" hidden>Aucun résultat pour cette recherche.</p></div></section></c:otherwise></c:choose>
+<%@ include file="/WEB-INF/jspf/footer.jspf" %>

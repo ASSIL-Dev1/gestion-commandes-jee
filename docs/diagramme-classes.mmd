@@ -1,0 +1,31 @@
+classDiagram
+direction LR
+class Client {
+  -Long id
+  -String nom
+  -String email
+  -String telephone
+  -String adresse
+}
+class Commande {
+  -Long id
+  -LocalDate dateCommande
+  -String statut
+  +BigDecimal getTotal()
+}
+class Produit {
+  -Long id
+  -String reference
+  -String designation
+  -BigDecimal prix
+}
+class LigneDeCommande {
+  -Long id
+  -Long commandeId
+  -int quantite
+  -BigDecimal prixUnitaire
+  +BigDecimal getSousTotal()
+}
+Client "1" -- "0..*" Commande : passe
+Commande "1" *-- "1..*" LigneDeCommande : contient
+Produit "1" -- "0..*" LigneDeCommande : concerne

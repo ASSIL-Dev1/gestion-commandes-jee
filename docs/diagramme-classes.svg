@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="490" height="310" preserveAspectRatio="xMinYMin meet" viewBox="0 0 490 310" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="490" height="310"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-310)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="188" width="210" height="118" rx="7" ry="7" style="stroke: rgb(85%,90%,89%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="276" width="210" height="30" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,41%,38%); fill-rule: evenodd;"/>
+			<text x="12" y="286" style="font-family: SegoeBold; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,572) scale(1,-1)">Client</text>
+			<text x="12" y="260" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,520) scale(1,-1)">id : Long</text>
+			<text x="12" y="247" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,494) scale(1,-1)">nom, email : String</text>
+			<text x="12" y="234" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,468) scale(1,-1)">telephone, adresse : String</text>
+			<rect x="280" y="188" width="210" height="118" rx="7" ry="7" style="stroke: rgb(85%,90%,89%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="280" y="276" width="210" height="30" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,41%,38%); fill-rule: evenodd;"/>
+			<text x="292" y="286" style="font-family: SegoeBold; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,572) scale(1,-1)">Commande</text>
+			<text x="292" y="260" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,520) scale(1,-1)">id : Long / client : Client</text>
+			<text x="292" y="247" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,494) scale(1,-1)">dateCommande : LocalDate</text>
+			<text x="292" y="234" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,468) scale(1,-1)">statut : String / lignes : List</text>
+			<text x="292" y="221" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,442) scale(1,-1)">+ getTotal() : BigDecimal</text>
+			<rect x="0" y="0" width="210" height="118" rx="7" ry="7" style="stroke: rgb(85%,90%,89%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="0" y="88" width="210" height="30" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,41%,38%); fill-rule: evenodd;"/>
+			<text x="12" y="98" style="font-family: SegoeBold; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,196) scale(1,-1)">Produit</text>
+			<text x="12" y="72" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,144) scale(1,-1)">id : Long</text>
+			<text x="12" y="59" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,118) scale(1,-1)">reference, designation : String</text>
+			<text x="12" y="46" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,92) scale(1,-1)">prix : BigDecimal</text>
+			<rect x="280" y="0" width="210" height="118" rx="7" ry="7" style="stroke: rgb(85%,90%,89%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="280" y="88" width="210" height="30" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,41%,38%); fill-rule: evenodd;"/>
+			<text x="292" y="98" style="font-family: SegoeBold; font-size: 11px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,196) scale(1,-1)">LigneDeCommande</text>
+			<text x="292" y="72" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,144) scale(1,-1)">id, commandeId : Long</text>
+			<text x="292" y="59" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,118) scale(1,-1)">produit : Produit / quantite : int</text>
+			<text x="292" y="46" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,92) scale(1,-1)">prixUnitaire : BigDecimal</text>
+			<text x="292" y="33" style="font-family: Segoe; font-size: 8px;fill: rgb(9%,17%,20%); stroke:none;" transform="translate(0,66) scale(1,-1)">+ getSousTotal() : BigDecimal</text>
+			<path d="M 210,247 L 280,247 Z" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 385,177 L 385,118 Z" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 210,59 L 280,59 Z" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="385 188, 380 182, 385 176, 390 182" style="stroke: rgb(6%,41%,38%); stroke-linecap: butt; stroke-width: 1; fill: rgb(6%,41%,38%); fill-rule: evenodd;"/>
+			<text x="216" y="255" style="font-family: Segoe; font-size: 8px;fill: rgb(6%,41%,38%); stroke:none;" transform="translate(0,510) scale(1,-1)">1</text>
+			<text x="249" y="255" style="font-family: Segoe; font-size: 8px;fill: rgb(6%,41%,38%); stroke:none;" transform="translate(0,510) scale(1,-1)">0..*</text>
+			<text x="217" y="67" style="font-family: Segoe; font-size: 8px;fill: rgb(6%,41%,38%); stroke:none;" transform="translate(0,134) scale(1,-1)">1</text>
+			<text x="249" y="67" style="font-family: Segoe; font-size: 8px;fill: rgb(6%,41%,38%); stroke:none;" transform="translate(0,134) scale(1,-1)">0..*</text>
+			<text x="394" y="170" style="font-family: Segoe; font-size: 8px;fill: rgb(6%,41%,38%); stroke:none;" transform="translate(0,340) scale(1,-1)">1</text>
+			<text x="394" y="127" style="font-family: Segoe; font-size: 8px;fill: rgb(6%,41%,38%); stroke:none;" transform="translate(0,254) scale(1,-1)">1..*</text>
+			<text x="225" y="231" style="font-family: Segoe; font-size: 8px;fill: rgb(40%,49%,52%); stroke:none;" transform="translate(0,462) scale(1,-1)">passe</text>
+			<text x="225" y="43" style="font-family: Segoe; font-size: 8px;fill: rgb(40%,49%,52%); stroke:none;" transform="translate(0,86) scale(1,-1)">concerne</text>
+			<text x="400" y="148" style="font-family: Segoe; font-size: 8px;fill: rgb(40%,49%,52%); stroke:none;" transform="translate(0,296) scale(1,-1)">contient</text>
+		</g>
+	</g>
+</svg>

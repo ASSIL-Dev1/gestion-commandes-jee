@@ -1,0 +1,17 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="fr_MA"/>
+<!doctype html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title><c:out value="${title}"/> | Commandes</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style.css"></head>
+<body><aside class="sidebar"><a class="brand" href="${pageContext.request.contextPath}/"><span class="brand-mark">C</span>Commandes<span class="brand-dot">.</span></a>
+<div class="workspace-label">ESPACE DE GESTION</div><nav aria-label="Navigation principale">
+<a class="${active eq 'dashboard' ? 'active' : ''}" href="${pageContext.request.contextPath}/"><span>◫</span> Vue d'ensemble</a>
+<a class="${active eq 'clients' ? 'active' : ''}" href="${pageContext.request.contextPath}/clients"><span>◎</span> Clients</a>
+<a class="${active eq 'produits' ? 'active' : ''}" href="${pageContext.request.contextPath}/produits"><span>◇</span> Produits</a>
+<a class="${active eq 'commandes' ? 'active' : ''}" href="${pageContext.request.contextPath}/commandes"><span>▤</span> Commandes</a></nav>
+<div class="sidebar-note"><strong>Atelier JEE</strong><span>Servlet · JSP · JavaBean</span><span>FST Tanger / LSI</span></div></aside>
+<div class="app"><header class="topbar"><span>Gestion commerciale <span class="slash">/</span> <c:out value="${title}"/></span><span class="avatar" aria-label="Espace atelier">GC</span></header>
+<main><div class="eyebrow">TABLEAU DE BORD / GESTION</div><h1><c:out value="${title}"/></h1>
+<c:if test="${not empty success}"><div role="status" class="notice success"><c:out value="${success}"/></div></c:if>
+<c:if test="${not empty error}"><div role="alert" class="notice error"><c:out value="${error}"/></div></c:if>

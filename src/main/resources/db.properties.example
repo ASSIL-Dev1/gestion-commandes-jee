@@ -1,0 +1,4 @@
+# Copier en db.properties (ignore par Git) ou utiliser DB_URL, DB_USER, DB_PASSWORD.
+db.url=jdbc:mysql://localhost:3306/gestion_commandes?connectionTimeZone=UTC&useUnicode=true&characterEncoding=UTF-8
+db.user=commandes_app
+db.password=REMPLACER_LOCALEMENT
